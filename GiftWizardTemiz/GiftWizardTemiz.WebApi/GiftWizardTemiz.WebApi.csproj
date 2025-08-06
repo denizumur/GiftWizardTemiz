@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>359c3f82-5fe9-4515-9776-f54deb38ac71</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.17" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GiftWizardTemiz.Application\GiftWizardTemiz.Application.csproj" />
+    <ProjectReference Include="..\GiftWizardTemiz.Infrastructure\GiftWizardTemiz.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

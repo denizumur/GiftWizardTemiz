@@ -1,0 +1,17 @@
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Infrastructure\bin\Debug\net8.0\GiftWizardTemiz.Infrastructure.deps.json
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Infrastructure\bin\Debug\net8.0\GiftWizardTemiz.Infrastructure.dll
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Infrastructure\bin\Debug\net8.0\GiftWizardTemiz.Infrastructure.pdb
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Infrastructure\bin\Debug\net8.0\GiftWizardTemiz.Application.dll
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Infrastructure\bin\Debug\net8.0\GiftWizardTemiz.Domain.dll
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Infrastructure\bin\Debug\net8.0\GiftWizardTemiz.Application.pdb
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Infrastructure\bin\Debug\net8.0\GiftWizardTemiz.Domain.pdb
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Infrastructure\obj\Debug\net8.0\GiftWizardTemiz.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Infrastructure\obj\Debug\net8.0\GiftWizardTemiz.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Infrastructure\obj\Debug\net8.0\GiftWizardTemiz.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Infrastructure\obj\Debug\net8.0\GiftWizardTemiz.Infrastructure.AssemblyInfo.cs
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Infrastructure\obj\Debug\net8.0\GiftWizardTemiz.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Infrastructure\obj\Debug\net8.0\GiftWiza.EA2AE39C.Up2Date
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Infrastructure\obj\Debug\net8.0\GiftWizardTemiz.Infrastructure.dll
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Infrastructure\obj\Debug\net8.0\refint\GiftWizardTemiz.Infrastructure.dll
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Infrastructure\obj\Debug\net8.0\GiftWizardTemiz.Infrastructure.pdb
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Infrastructure\obj\Debug\net8.0\ref\GiftWizardTemiz.Infrastructure.dll

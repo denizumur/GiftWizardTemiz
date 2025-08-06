@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "GiftWizardTemiz.WebApi.Controllers.GiftFinderController",
+    "Method": "GetSuggestions",
+    "RelativePath": "api/GiftFinder/suggestions",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "profileDto",
+        "Type": "GiftWizardTemiz.Application.Features.GiftFinder.Dtos.GiftProfileDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

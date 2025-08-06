@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hediye Bulma Sihirbazı</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 2rem 0;
+        }
+
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 800px;
+            width: 90%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input, textarea, select {
+            padding: 0.8rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            grid-column: 1 / -1;
+            background-color: #3498db;
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+            button:hover {
+                background-color: #2980b9;
+            }
+
+        #loader {
+            display: none;
+            text-align: center;
+            padding: 1rem;
+            font-size: 1.2rem;
+        }
+
+        #results {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .card {
+            background: #ecf0f1;
+            padding: 1.5rem;
+            border-left: 5px solid #3498db;
+            border-radius: 5px;
+        }
+
+            .card h3 {
+                margin-top: 0;
+                color: #2c3e50;
+            }
+
+            .card p {
+                font-size: 1rem;
+                color: #34495e;
+                line-height: 1.6;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hediye Bulma Sihirbazı</h1>
+        <form id="gift-form">
+            <div class="form-group">
+                <label for="ageRange">Yaş Aralığı:</label>
+                <input type="text" id="ageRange" value="30-40" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Cinsiyet:</label>
+                <select id="gender" required>
+                    <option value="1">Kadın</option>
+                    <option value="2">Erkek</option>
+                    <option value="0">Belirtilmemiş</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="relationship">İlişkiniz:</label>
+                <input type="text" id="relationship" value="Eşim" required>
+            </div>
+            <div class="form-group">
+                <label for="occasion">Özel Gün:</label>
+                <input type="text" id="occasion" value="Evlilik Yıldönümü" required>
+            </div>
+            <div class="form-group full-width">
+                <label for="interests">İlgi Alanları (virgülle ayırın):</label>
+                <textarea id="interests" rows="3" required>seyahat, gurme lezzetler, sinema</textarea>
+            </div>
+            <div class="form-group">
+                <label for="style">Kişisel Tarz:</label>
+                <input type="text" id="style" value="Şık ve Modern" required>
+            </div>
+            <div class="form-group">
+                <label for="priceRange">Bütçe Aralığı:</label>
+                <input type="text" id="priceRange" value="500-1500 TL" required>
+            </div>
+
+            <button type="submit">Sihirli Önerileri Getir!</button>
+        </form>
+
+        <div id="loader">Yapay zeka sizin için en iyi hediyeleri düşünüyor... 🧠✨</div>
+        <div id="results"></div>
+    </div>
+
+    <script>
+        document.getElementById('gift-form').addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            const loader = document.getElementById('loader');
+            const resultsDiv = document.getElementById('results');
+
+            loader.style.display = 'block';
+            resultsDiv.innerHTML = '';
+
+            const requestBody = {
+                ageRange: document.getElementById('ageRange').value,
+                gender: parseInt(document.getElementById('gender').value, 10),
+                interests: document.getElementById('interests').value.split(',').map(item => item.trim()),
+                style: document.getElementById('style').value,
+                occasion: document.getElementById('occasion').value,
+                relationship: document.getElementById('relationship').value,
+                priceRange: document.getElementById('priceRange').value,
+            };
+
+            try {
+                const response = await fetch('/api/giftfinder/suggestions', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(requestBody)
+                });
+
+                if (!response.ok) { throw new Error(`HTTP hatası! Durum: ${response.status}`); }
+
+                const suggestions = await response.json();
+
+                suggestions.forEach(suggestion => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.innerHTML = `
+                            <h3>${suggestion.productName}</h3>
+                            <p>${suggestion.reasoning}</p>
+                        `;
+                    resultsDiv.appendChild(card);
+                });
+
+            } catch (error) {
+                resultsDiv.innerHTML = `<p style="color: red;">Bir hata oluştu: ${error.message}</p>`;
+            } finally {
+                loader.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

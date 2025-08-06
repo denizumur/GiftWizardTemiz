@@ -1,0 +1,15 @@
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Application\bin\Debug\net8.0\GiftWizardTemiz.Application.deps.json
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Application\bin\Debug\net8.0\GiftWizardTemiz.Application.dll
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Application\bin\Debug\net8.0\GiftWizardTemiz.Application.pdb
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Application\bin\Debug\net8.0\GiftWizardTemiz.Domain.dll
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Application\bin\Debug\net8.0\GiftWizardTemiz.Domain.pdb
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Application\obj\Debug\net8.0\GiftWizardTemiz.Application.csproj.AssemblyReference.cache
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Application\obj\Debug\net8.0\GiftWizardTemiz.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Application\obj\Debug\net8.0\GiftWizardTemiz.Application.AssemblyInfoInputs.cache
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Application\obj\Debug\net8.0\GiftWizardTemiz.Application.AssemblyInfo.cs
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Application\obj\Debug\net8.0\GiftWizardTemiz.Application.csproj.CoreCompileInputs.cache
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Application\obj\Debug\net8.0\GiftWiza.B129BE10.Up2Date
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Application\obj\Debug\net8.0\GiftWizardTemiz.Application.dll
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Application\obj\Debug\net8.0\refint\GiftWizardTemiz.Application.dll
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Application\obj\Debug\net8.0\GiftWizardTemiz.Application.pdb
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Application\obj\Debug\net8.0\ref\GiftWizardTemiz.Application.dll

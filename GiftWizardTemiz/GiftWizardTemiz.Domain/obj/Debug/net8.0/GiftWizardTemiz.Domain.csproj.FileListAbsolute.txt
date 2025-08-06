@@ -1,0 +1,11 @@
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Domain\bin\Debug\net8.0\GiftWizardTemiz.Domain.deps.json
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Domain\bin\Debug\net8.0\GiftWizardTemiz.Domain.dll
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Domain\bin\Debug\net8.0\GiftWizardTemiz.Domain.pdb
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Domain\obj\Debug\net8.0\GiftWizardTemiz.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Domain\obj\Debug\net8.0\GiftWizardTemiz.Domain.AssemblyInfoInputs.cache
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Domain\obj\Debug\net8.0\GiftWizardTemiz.Domain.AssemblyInfo.cs
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Domain\obj\Debug\net8.0\GiftWizardTemiz.Domain.csproj.CoreCompileInputs.cache
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Domain\obj\Debug\net8.0\GiftWizardTemiz.Domain.dll
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Domain\obj\Debug\net8.0\refint\GiftWizardTemiz.Domain.dll
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Domain\obj\Debug\net8.0\GiftWizardTemiz.Domain.pdb
+C:\Users\deniz\Desktop\GiftWizardTemiz\GiftWizardTemiz.Domain\obj\Debug\net8.0\ref\GiftWizardTemiz.Domain.dll
