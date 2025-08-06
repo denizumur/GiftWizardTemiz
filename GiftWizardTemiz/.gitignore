@@ -1,0 +1,25 @@
+# dependencies
+[Dd]ependencies/
+[Pp]ackages/
+*.nupkg
+*.nuget.props
+*.nuget.targets
+
+# build artifacts
+[Bb]uild/
+[Bb]uildClient/
+[Bb]in/
+[Oo]bj/
+
+# user-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+
+# local secrets
+secrets.json
+
+# others
+*.DS_Store
