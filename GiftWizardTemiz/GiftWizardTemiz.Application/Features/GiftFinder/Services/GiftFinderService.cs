@@ -1,4 +1,4 @@
-﻿// GiftWizardTemiz.Application/Features/GiftFinder/Services/GiftFinderService.cs
+﻿
 using GiftWizardTemiz.Application.Abstractions;
 using GiftWizardTemiz.Application.Features.GiftFinder.Dtos;
 using GiftWizardTemiz.Domain.Entities;
@@ -48,7 +48,7 @@ public class GiftFinderService : IGiftFinderService
         var suggestions = new List<GiftSuggestionDto>();
         try
         {
-            // --- YENİ EKLENEN TEMİZLEME KODU ---
+            
             var startIndex = ideasAsJson.IndexOf('[');
             var endIndex = ideasAsJson.LastIndexOf(']');
 
@@ -58,11 +58,11 @@ public class GiftFinderService : IGiftFinderService
                 throw new JsonException("Gelen cevapta JSON array bulunamadı. Gelen Ham Metin: " + ideasAsJson);
             }
 
-            // Sadece [ ile ] arasındaki saf JSON'ı alıyoruz.
+            
             var cleanJson = ideasAsJson.Substring(startIndex, endIndex - startIndex + 1);
-            // ------------------------------------
+           
 
-            // Artık temizlenmiş JSON'ı C# nesnelerine dönüştürüyoruz
+           
             var aiSuggestions = JsonSerializer.Deserialize<List<AiGiftSuggestion>>(cleanJson);
 
             foreach (var aiSuggestion in aiSuggestions)
@@ -77,7 +77,7 @@ public class GiftFinderService : IGiftFinderService
                 });
             }
         }
-        catch (Exception ex) // Hata tipini daha genel tuttuk ki her şeyi yakalayabilelim
+        catch (Exception ex) 
         {
             suggestions.Add(new GiftSuggestionDto
             {

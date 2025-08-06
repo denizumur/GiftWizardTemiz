@@ -1,5 +1,5 @@
-﻿// GiftWizardTemiz.Application/Abstractions/IAiService.cs
-using GiftWizardTemiz.Domain.Entities; // GiftProfile'ı kullanmak için
+﻿
+using GiftWizardTemiz.Domain.Entities; 
 
 namespace GiftWizardTemiz.Application.Abstractions;
 

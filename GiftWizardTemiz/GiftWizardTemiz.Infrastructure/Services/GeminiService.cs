@@ -1,4 +1,4 @@
-﻿// GiftWizardTemiz.Infrastructure/Services/GeminiService.cs
+﻿
 using GiftWizardTemiz.Application.Abstractions;
 using GiftWizardTemiz.Domain.Entities;
 using Microsoft.Extensions.Configuration;
@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace GiftWizardTemiz.Infrastructure.Services;
 
 #region API Veri Modelleri
-// --- İSTEK (Request) Modelleri ---
+
 public class GeminiRequest
 {
     [JsonPropertyName("contents")]
@@ -31,7 +31,6 @@ public class RequestPart
     public string Text { get; set; }
 }
 
-// --- CEVAP (Response) Modelleri ---
 public class GeminiResponse
 {
     [JsonPropertyName("candidates")]
