@@ -12,8 +12,6 @@ using System.Threading.Tasks;
 namespace GiftWizardTemiz.Infrastructure.Services;
 
 #region API Veri Modelleri
-// Bu bölge, Gemini API ile konuşurken kullandığımız veri yapılarını temiz bir şekilde gruplar.
-
 // --- İSTEK (Request) Modelleri ---
 public class GeminiRequest
 {
@@ -59,13 +57,12 @@ public class ResponsePart
 }
 #endregion
 
-
 public class GeminiService : IAiService
 {
-    private readonly IHttpClientFactory _httpClientFactory;
+    private readonly System.Net.Http.IHttpClientFactory _httpClientFactory;
     private readonly IConfiguration _configuration;
 
-    public GeminiService(IHttpClientFactory httpClientFactory, IConfiguration configuration)
+    public GeminiService(System.Net.Http.IHttpClientFactory httpClientFactory, IConfiguration configuration)
     {
         _httpClientFactory = httpClientFactory;
         _configuration = configuration;
@@ -84,7 +81,6 @@ public class GeminiService : IAiService
 
         var interestsText = string.Join(", ", profile.Interests);
 
-        // Raw string literal with interpolation - fixed syntax
         var prompt = $$"""
 Sen, hediye seçimi konusunda uzman, psikoloji ve trendlerden anlayan bir hediye danışmanısın. Görevin, sana verilen profil bilgilerini derinlemesine analiz ederek, son derece isabetli ve kişiye özel 5 hediye fikri sunmaktır.
 
@@ -106,12 +102,11 @@ Kesinlikle sadece JSON array'i dön. Öncesinde veya sonrasında 'Elbette, işte
 
 Örnek JSON:
 [
-    "idea": "Yıldız Haritası Posteri", "reasoning": "Yıl dönümü için romantik bir hediye. {{profile.Relationship}} ilişkinizin başladığı günün yıldız haritası, modern tarzına uygun ve anlamlı bir hatıra olacaktır."},
-    "idea": "3. Nesil Kahve Demleme Seti", "reasoning": "{{interestsText}} arasında kahve olması ve teknolojiye ilgisi, onu yeni demleme teknikleri denemekten mutlu edecektir. Bu set, {{profile.AgeRange}} yaş aralığı için popüler ve sofistike bir seçimdir."}
+    { "idea": "Yıldız Haritası Posteri", "reasoning": "Yıl dönümü için romantik bir hediye. {{profile.Relationship}} ilişkinizin başladığı günün yıldız haritası, modern tarzına uygun ve anlamlı bir hatıra olacaktır." },
+    { "idea": "3. Nesil Kahve Demleme Seti", "reasoning": "{{interestsText}} arasında kahve olması ve teknolojiye ilgisi, onu yeni demleme teknikleri denemekten mutlu edecektir. Bu set, {{profile.AgeRange}} yaş aralığı için popüler ve sofistike bir seçimdir." }
 ]
 """;
 
-        // Güçlü tipler kullanarak (strongly-typed) istek gövdesini oluşturuyoruz.
         var requestBody = new GeminiRequest
         {
             Contents = new List<RequestContent>
